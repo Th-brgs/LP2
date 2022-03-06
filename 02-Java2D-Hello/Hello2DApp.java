@@ -33,7 +33,6 @@ class Hello2DFrame extends JFrame {
     }
     void drawRectangles(Graphics g) {
         Graphics2D g2d = (Graphics2D) g;
-        // code to draw rectangles goes here...
 	g2d.setColor(Color.YELLOW);
         g2d.drawRect(205,205,40,40);
 	g2d.fillRect(205,205,40,40);
