@@ -12,12 +12,11 @@ public class PackFrame extends Frame implements MouseListener, KeyListener{
 	ArrayList<Figure> figList = new ArrayList<Figure>();
 	//para tratar Focus
 	Figure Focus = null; 
-	int mousex = 0, mousey = 0; //para identificar a posiÁ„o do click do mouse
+	int mousex = 0, mousey = 0; //para identificar a posi√ß√£o do click do mouse
 	int specialKey; // para identificar uma tecla especial
 	int velx, vely; // para mover as figuras com as setas
 
 
-	Label l;  
 	PackFrame(){  
 		addMouseListener(this); 
 		addKeyListener(this);
@@ -60,11 +59,7 @@ public class PackFrame extends Frame implements MouseListener, KeyListener{
 						}
 					}
 				}
-				); 
-
-		l=new Label();  
-		l.setBounds(50,50,200,50);  
-		add(l);  
+				);   
 		setSize(800,600);  
 		setLayout(null);  
 		this.setTitle("Packages Figures");
@@ -77,7 +72,7 @@ public class PackFrame extends Frame implements MouseListener, KeyListener{
 		int i, n;
 		Figure newFocus = null;
 
-		//Capturando a posiÁ„o do click do mouse para uso futuro
+		//Capturando a posi√ß√£o do click do mouse para uso futuro
 		mousex = e.getX();
 		mousey = e.getY();
 
@@ -226,7 +221,7 @@ public class PackFrame extends Frame implements MouseListener, KeyListener{
 	public void paint (Graphics g) {
 		super.paint(g);
 
-		Figure figAp; // definindo um ret‚ngulo de apoio
+		Figure figAp; // definindo um ret√¢ngulo de apoio
 		int i, n;
 		n = figList.size();
 		for (i=0; i<n; i++) {
@@ -236,7 +231,7 @@ public class PackFrame extends Frame implements MouseListener, KeyListener{
 	}
 
 	public void remove (Figure f) {
-		Figure figAp; // definindo um ret‚ngulo de apoio
+		Figure figAp; // definindo um ret√¢ngulo de apoio
 		int i = 0, n;
 		n = figList.size();
 		while (i<n) {
@@ -257,7 +252,7 @@ public class PackFrame extends Frame implements MouseListener, KeyListener{
 
 		Focus = f;
 		Focus.recebeFocus();
-		figList.remove(f); //volta um false quando f È uma nova figura
+		figList.remove(f); //volta um false quando f √© uma nova figura
 		figList.add(f);
 		repaint();
 	}
