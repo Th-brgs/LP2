@@ -98,9 +98,8 @@ public class PackFrame extends Frame implements MouseListener, KeyListener{
 	public void mouseExited(MouseEvent e) {  
 	}  
 
-	public void mousePressed(MouseEvent e) {  
-		mousex = e.getX();
-		mousey = e.getY();  
+	public void mousePressed(MouseEvent e) {
+		mouseClicked(e);
 	}  
 	public void mouseReleased(MouseEvent e) {
 	}
