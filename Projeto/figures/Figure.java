@@ -75,7 +75,7 @@ public class Figure {
        if ( figfocus == true ) { return; }
        else {
               drawColorSemFocus = this.drawColor;//salvar a cor de borda	
-              figfocus = true; // assumir que está com o foco
+              figfocus = true; // assumir que esta com o foco
               this.changeCollor (9,0); //alterar a cor da borda
        }
     }
