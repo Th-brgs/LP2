@@ -14,7 +14,7 @@ l- Criar linha
 
 2-	Foco:
 
-Quando uma figura for criada, o foco automaticamente irá até ela, porém, ele também pode ser manualmente decidido clicando com o botão esquerdo do mouse em uma figura. Assim que o foco for atribuído à uma figura, ele não será removido até outra figura ser clicada ou criada, ou até a cor de borda da figura em foco ser mudada. Além disso, a atribuição do foco irá colocar a figura selecionada na frente de todas as outras. O foco neste programa é representado por uma borda vermelha por volta de uma figura, e todas as ações a seguir apenas serão possíveis se houver uma figura em foco
+Quando uma figura for criada, o foco automaticamente irá até ela, porém, ele também pode ser manualmente decidido clicando com ou pressionando e segurando o botão esquerdo do mouse em uma figura. Assim que o foco for atribuído à uma figura, ele não será removido até outra figura ser clicada ou criada, ou até a cor de borda da figura em foco ser mudada. Além disso, a atribuição do foco irá colocar a figura selecionada na frente de todas as outras. O foco neste programa é representado por uma borda vermelha por volta de uma figura, e todas as ações a seguir apenas serão possíveis se houver uma figura em foco
 
 3-	Mover o foco:
 
