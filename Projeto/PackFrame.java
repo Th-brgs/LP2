@@ -473,7 +473,7 @@ public class PackFrame extends JFrame implements MouseListener, KeyListener{
         }
     }
 	
-	//Salvar listas de figura em um arquivo <listData.bin>
+	//Salvar listas de figura em um arquivo <proj.bin>
 	public void salvarlista() throws Exception 
     {
         try
