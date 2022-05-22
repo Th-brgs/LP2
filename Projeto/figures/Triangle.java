@@ -23,7 +23,7 @@ public class Triangle extends Figure {
         System.out.format("triangulo");
     }
     
-    public void pontosTriangulo (int x, int y, int w, int h) {
+    private void pontosTriangulo (int x, int y, int w, int h) {
     	this.p1x = x;
         this.p1y = y;
         this.p2x = x + w;
