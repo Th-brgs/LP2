@@ -304,28 +304,28 @@ public class PackFrame extends JFrame implements MouseListener, KeyListener{
 	
 	
 	
-	public void criaRetangulo (){
+	private void criaRetangulo (){
 		Rect rect_n;
 		rect_n = new Rect(mousex, mousey); 
 		figList.add(rect_n);
 		trataFiguraEmFoco (rect_n);
 	}
 	
-	public void criaEllipse (){
+	private void criaEllipse (){
 		Ellipse elipse_n;
 		elipse_n = new Ellipse(mousex, mousey); 
 		figList.add(elipse_n);
 		trataFiguraEmFoco (elipse_n);
 	}
 	
-	public void criaTriangulo (){
+	private void criaTriangulo (){
 		Triangle tri_n;
 		tri_n = new Triangle(mousex, mousey); 
 		figList.add(tri_n);
 		trataFiguraEmFoco (tri_n);
 	}
 	
-	public void criaLinha (){
+	private void criaLinha (){
 		Line line_n;
 		line_n = new Line(mousex, mousey); 
 		figList.add(line_n);
@@ -394,7 +394,7 @@ public class PackFrame extends JFrame implements MouseListener, KeyListener{
 		};
 	}
 
-	public void remove (Figure f) {
+	private void remove (Figure f) {
 		Figure figAp; // definindo uma figura de apoio
 		int i = 0, n;
 		n = figList.size();
@@ -409,7 +409,7 @@ public class PackFrame extends JFrame implements MouseListener, KeyListener{
 	}
 
 	//Responsavel por ajusta a figura em Foco
-	public void trataFiguraEmFoco (Figure f) {
+	private void trataFiguraEmFoco (Figure f) {
 
 		if ( Focus != null ) {
 			Focus.perdeFocus();}
@@ -422,29 +422,29 @@ public class PackFrame extends JFrame implements MouseListener, KeyListener{
 	}
 
 	//Responsavel por ajusta o botao em Foco
-		public void trataBotaoEmFoco (Button b) {
+	private void trataBotaoEmFoco (Button b) {
 
-			if ( BTfocus != null ) {
-				BTfocus.perdeFocus();}
+		if ( BTfocus != null ) {
+			BTfocus.perdeFocus();}
 
-			BTfocus = b;
-			BTfocus.recebeFocus();
-			repaint();
+		BTfocus = b;
+		BTfocus.recebeFocus();
+		repaint();
 		}
 		
-	public void trocaColorFill (Integer c) {
+	private void trocaColorFill (Integer c) {
 		Focus.changeCollor(0, c);
 		repaint();
 	}
 	
-	public void trocaColorDraw (Integer c) {
+	private void trocaColorDraw (Integer c) {
 		Focus.perdeFocus();
 		Focus.changeCollor(c, 0 );
 		Focus = null;
 		repaint();
 	}
 	
-	public void salvarSVG() throws Exception 
+	private void salvarSVG() throws Exception 
     {
 		Figure figAp; // definindo uma Figura de apoio
 		int i, n;
@@ -473,12 +473,12 @@ public class PackFrame extends JFrame implements MouseListener, KeyListener{
         }
     }
 	
-	//Salvar listas de figura em um arquivo <proj.bin>
-	public void salvarlista() throws Exception 
+	//Salvar listas de figura em um arquivo <listData.bin>
+	private void salvarlista() throws Exception 
     {
         try
         {
-            FileOutputStream fos = new FileOutputStream("proj.bin");
+            FileOutputStream fos = new FileOutputStream("listData.bin");
             ObjectOutputStream oos = new ObjectOutputStream(fos);
             oos.writeObject(figList);
             oos.close();
@@ -492,10 +492,10 @@ public class PackFrame extends JFrame implements MouseListener, KeyListener{
     }
 	
 	//Recupera lista de figura de um arquivo <listData.bin>
-	public void recuperalista() {
+	private void recuperalista() {
 		try
 		  {
-		  FileInputStream fin=new FileInputStream("proj.bin");
+		  FileInputStream fin=new FileInputStream("listData.bin");
 		  ObjectInputStream oin=new ObjectInputStream(fin);
 		 
 		  figList = (ArrayList) oin.readObject();
