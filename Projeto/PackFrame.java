@@ -473,12 +473,12 @@ public class PackFrame extends JFrame implements MouseListener, KeyListener{
         }
     }
 	
-	//Salvar listas de figura em um arquivo <proj.bin>
+	//Salvar listas de figura em um arquivo <listData.bin>
 	public void salvarlista() throws Exception 
     {
         try
         {
-            FileOutputStream fos = new FileOutputStream("proj.bin");
+            FileOutputStream fos = new FileOutputStream("listData.bin");
             ObjectOutputStream oos = new ObjectOutputStream(fos);
             oos.writeObject(figList);
             oos.close();
@@ -486,15 +486,16 @@ public class PackFrame extends JFrame implements MouseListener, KeyListener{
         } 
         catch (IOException ioe) 
         {
+	    System.out.println("ERRO!");
             ioe.printStackTrace();
         }
     }
 	
-	//Recupera lista de figura de um arquivo <proj.bin>
+	//Recupera lista de figura de um arquivo <listData.bin>
 	public void recuperalista() {
 		try
 		  {
-		  FileInputStream fin=new FileInputStream("proj.bin");
+		  FileInputStream fin=new FileInputStream("listData.bin");
 		  ObjectInputStream oin=new ObjectInputStream(fin);
 		 
 		  figList = (ArrayList) oin.readObject();
@@ -508,7 +509,7 @@ public class PackFrame extends JFrame implements MouseListener, KeyListener{
   		  for (i=0; i<n; i++) {
   			figAp = figList.get(i);
   			figAp.changeCollor(figAp.intDrawColor, figAp.intFillColor);
-  		    System.out.print(figAp.retornaCoremString (figAp.drawColor)); 
+  		    //System.out.print(figAp.retornaCoremString (figAp.drawColor)); 
 		    }
 		  
 		  }
