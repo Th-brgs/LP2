@@ -22,7 +22,7 @@ public class PackFrame extends JFrame implements MouseListener, KeyListener{
 	ArrayList<Button> buttonList = new ArrayList<Button>();
 	//para tratar BTfocus
 	Button BTfocus = null; 
-	int mousex = 0, mousey = 0; //para identificar a posição do click do mouse
+	int mousex = 0, mousey = 0; //para identificar a posiÃ§Ã£o do click do mouse
 	int specialKey; // para identificar uma tecla especial
 	int velx, vely; // para mover as figuras com as setas
 	
@@ -158,7 +158,7 @@ public class PackFrame extends JFrame implements MouseListener, KeyListener{
 		Button butAp; // definindo um botao de apoio
 		Button newBTFocus = null;
 
-		//Capturando a posição do click do mouse para uso futuro
+		//Capturando a posiÃ§Ã£o do click do mouse para uso futuro
 		mousex = e.getX();
 		mousey = e.getY();
 
@@ -199,7 +199,7 @@ public class PackFrame extends JFrame implements MouseListener, KeyListener{
 			repaint(); 
 		}
 		
-		// tratando criação de figuras
+		// tratando criaÃ§Ã£o de figuras
 		if ((newFigFocus == null) && (newBTFocus == null)) {
 			if (BTfocus != null) {
 				if (BTfocus.idx == 1) {
@@ -250,7 +250,7 @@ public class PackFrame extends JFrame implements MouseListener, KeyListener{
 		letra = e.getKeyChar();
 		specialKey = e.getKeyCode();
 		
-		// Tratando criação de figuras
+		// Tratando criaÃ§Ã£o de figuras
 
 		if (Character.compare(letra, 'r') == 0) {
 			criaRetangulo();
@@ -416,7 +416,7 @@ public class PackFrame extends JFrame implements MouseListener, KeyListener{
 
 		Focus = f;
 		Focus.recebeFocus();
-		figList.remove(f); //volta um false quando f é uma nova figura
+		figList.remove(f); //volta um false quando f Ã© uma nova figura
 		figList.add(f);
 		repaint();
 	}
@@ -473,12 +473,12 @@ public class PackFrame extends JFrame implements MouseListener, KeyListener{
         }
     }
 	
-	//Salvar listas de figura em um arquivo <listData.bin>
+	//Salvar listas de figura em um arquivo <proj.bin>
 	public void salvarlista() throws Exception 
     {
         try
         {
-            FileOutputStream fos = new FileOutputStream("listData.bin");
+            FileOutputStream fos = new FileOutputStream("proj.bin");
             ObjectOutputStream oos = new ObjectOutputStream(fos);
             oos.writeObject(figList);
             oos.close();
@@ -490,11 +490,11 @@ public class PackFrame extends JFrame implements MouseListener, KeyListener{
         }
     }
 	
-	//Recupera lista de figura de um arquivo <listData.bin>
+	//Recupera lista de figura de um arquivo <proj.bin>
 	public void recuperalista() {
 		try
 		  {
-		  FileInputStream fin=new FileInputStream("listData.bin");
+		  FileInputStream fin=new FileInputStream("proj.bin");
 		  ObjectInputStream oin=new ObjectInputStream(fin);
 		 
 		  figList = (ArrayList) oin.readObject();
@@ -503,7 +503,7 @@ public class PackFrame extends JFrame implements MouseListener, KeyListener{
 		  fin.close();
 		  Figure figAp;
 		  
-		  //Tratando o problema da falta de serialização do tipo Color
+		  //Tratando o problema da falta de serializaÃ§Ã£o do tipo Color
 		  int i, n = figList.size();
   		  for (i=0; i<n; i++) {
   			figAp = figList.get(i);
