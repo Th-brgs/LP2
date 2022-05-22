@@ -11,7 +11,7 @@ public abstract class Figure implements IVisible, Serializable {
     public int x, y;
    // int p2x, p2y, p3x, p3y;
     public int w=100, h=50; //definindo comprimento e altura inicial
-    public int intDrawColor, intFillColor, intDrawColorSemFocus; //inicializando cores para serializaÁ„o
+    public int intDrawColor, intFillColor, intDrawColorSemFocus; //inicializando cores para serializa√ß√£o
     public Color drawColor, fillColor; //definindo cores iniciais - branco e preto
     /* Color drawColor = Color.black, fillColor = Color.lightGray; //definindo cores iniciais - branco e preto  */
     Color drawColorSemFocus = Color.black; //definindo cor para Foco
@@ -96,13 +96,13 @@ public abstract class Figure implements IVisible, Serializable {
        else {
               drawColorSemFocus = this.drawColor;//salvar a cor de borda	
               intDrawColorSemFocus = this.intDrawColor;
-              figfocus = true; // assumir que est· com o foco
+              figfocus = true; // assumir que est√° com o foco
               this.changeCollor (9,0); //alterar a cor da borda
        }
     }
 
     public void changeCollor  (int numDrawColor, int numFillColor) {
-    /*  0 - n„o realiza nenhum tratamento para o equivalente ao tipo
+    /*  0 - n√£o realiza nenhum tratamento para o equivalente ao tipo
      *  1- cor de fundo Azul 4- cor de borda Azul
      *  2- cor de fundo Verde 5- cor de borda Verde
      *  3- cor de fundo Amarelo 6- cor de borda Laranja
@@ -142,7 +142,7 @@ public abstract class Figure implements IVisible, Serializable {
     	 intDrawColor = numDrawColor;
     	 intDrawColorSemFocus = this.intDrawColor;
      }
-     //registrando as cores em int para serializaÁ„o
+     //registrando as cores em int para serializa√ß√£o
      
      if (numFillColor != 0) {
     	 intFillColor = numFillColor;
@@ -160,7 +160,7 @@ public abstract class Figure implements IVisible, Serializable {
     	
     }
     
-    public String retornaCoremString  (Color c) {
+    protected String retornaCoremString  (Color c) {
         /*  0 - Draw Black e para fill - Gray
          *  1- cor de fundo Azul 4- cor de borda Azul
          *  2- cor de fundo Verde 5- cor de borda Verde
