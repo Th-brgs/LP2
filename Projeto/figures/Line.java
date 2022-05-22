@@ -8,7 +8,7 @@ public class Line extends Figure {
 	int p1x, p1y, p2x, p2y, mreta;
 	double area, s, t;
 
-	public Line (int x, int y, int w, int h, Color drawColor, Color fillColor) {
+	protected Line (int x, int y, int w, int h, Color drawColor, Color fillColor) {
 		super(x, y, w, h, drawColor, fillColor);
 		pontosLine(x, y, w, h);
 	}
