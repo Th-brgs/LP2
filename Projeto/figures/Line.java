@@ -26,7 +26,7 @@ public class Line extends Figure {
 		System.out.format("line");
 	}
 
-	public void pontosLine (int x, int y, int w, int h) {
+	private void pontosLine (int x, int y, int w, int h) {
 		this.p1x = x;
 		this.p1y = y;
 		this.p2x = x + w;
