@@ -7,7 +7,7 @@ import java.io.PrintWriter;
 public class Ellipse extends Figure {
 	boolean elipsefocus = false;
 	
-	public Ellipse (int x, int y, int w, int h, Color drawColor, Color fillColor) {
+	private Ellipse (int x, int y, int w, int h, Color drawColor, Color fillColor) {
     	super(x, y, w, h, drawColor, fillColor);
     }
     
