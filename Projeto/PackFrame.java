@@ -478,7 +478,7 @@ public class PackFrame extends JFrame implements MouseListener, KeyListener{
     {
         try
         {
-            FileOutputStream fos = new FileOutputStream("listData.bin");
+            FileOutputStream fos = new FileOutputStream("proj.bin");
             ObjectOutputStream oos = new ObjectOutputStream(fos);
             oos.writeObject(figList);
             oos.close();
@@ -495,7 +495,7 @@ public class PackFrame extends JFrame implements MouseListener, KeyListener{
 	public void recuperalista() {
 		try
 		  {
-		  FileInputStream fin=new FileInputStream("listData.bin");
+		  FileInputStream fin=new FileInputStream("proj.bin");
 		  ObjectInputStream oin=new ObjectInputStream(fin);
 		 
 		  figList = (ArrayList) oin.readObject();
