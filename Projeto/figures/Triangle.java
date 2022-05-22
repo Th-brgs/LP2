@@ -8,7 +8,7 @@ public class Triangle extends Figure {
     int p1x, p1y, p2x, p2y, p3x, p3y; 
     double area, s, t;
     
-    public Triangle (int x, int y, int w, int h, Color drawColor, Color fillColor) {
+    private Triangle (int x, int y, int w, int h, Color drawColor, Color fillColor) {
     	super(x, y, w, h, drawColor, fillColor);
         pontosTriangulo(x, y, w, h);
     }
