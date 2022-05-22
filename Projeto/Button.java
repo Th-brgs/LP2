@@ -11,7 +11,7 @@ public class Button implements IVisible {
     private Figure fig;
     public boolean focus = false;
 
-    public Button (int idx, Figure fig) {
+    Button (int idx, Figure fig) {
         this.idx = idx;
         this.fig = fig;
         this.fig.AjustaFigura(PAD+SPC, PAD+SPC + idx*DIM, DIM-PAD*2, DIM-PAD*2);
@@ -46,7 +46,7 @@ public class Button implements IVisible {
        }
     
     public void recebeFocus() {
-        focus = true; // assumir que est· com o foco
+        focus = true; // assumir que est√° com o foco
         
      }
 }
