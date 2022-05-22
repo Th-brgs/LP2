@@ -10,7 +10,7 @@ public class Rect extends Figure {
     //Color drawColor = Color.black, fillColor = Color.gray; //definindo cores iniciais - branco e preto
     //Color drawColorSemFocus = Color.black; //definindo cor para Foco
     
-    public Rect (int x, int y, int w, int h, Color drawColor, Color fillColor) {
+    private Rect (int x, int y, int w, int h, Color drawColor, Color fillColor) {
     	super(x, y, w, h, drawColor, fillColor);
     }
     
